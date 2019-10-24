@@ -10,18 +10,22 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: './bundle.js'
     },
-    module:{
+    module: {
         rules: [
             {
                 test: /\.js$/,
                 // The loader is used to transpile the code into plain js code
                 loader: ['babel-loader']
+            },
+            {
+                test: /\.(png|jpeg)$/,
+                loader: 'file-loader'
             }
-        ]    
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template:'./index.html',
+            template: './index.html',
             inject: 'body'
         })
     ]
