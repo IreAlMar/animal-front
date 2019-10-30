@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom'; // Renderer
-import App from './App';
+import App from './components/App';
 
 // Mount the component into the browser
 const MOUNT_ELEMENT = document.getElementById('root');
