@@ -1,0 +1,5 @@
+/* Extending Basscss library by cusstom class name */
+
+.border-bottom-dashed {
+    border-bottom-style: dashed;
+}
