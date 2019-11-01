@@ -7,14 +7,6 @@
         "start": "./node_modules/.bin/webpack-dev-server",
         "build": "./node_modules/.bin/webpack",
         "lint": "./node_modules/.bin/eslint ./src",
-        "precommit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.js": [
-            "yarn lint",
-            "prettier --write",
-            "git add"
-        ]
     },
     "devDependencies": {
         "babel-cli": "^6.26.0",

@@ -79,3 +79,18 @@ Tool for building and enforcing a style guide.
         "airbnb"
     ],`
 1. `yarn add eslint-config-prettier --dev`
+
+## Husky
+
+Precommiting step to apply lint ant prettier rules before commiting.
+Not fully working right now.
+` "lint": "./node_modules/.bin/eslint ./src",
+        // "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "yarn lint",
+            "prettier --write",
+            "git add"
+        ]
+    },`
