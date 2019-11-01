@@ -16,13 +16,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
                 // The loader is used to transpile the code into plain js code
+                test: /\.js$/,
+                // Avoid transpiling node_modules code
+                exclude: /node_modules/,
                 loader: ['babel-loader']
             },
             {
                 test: /\.(png|jpeg)$/,
                 loader: 'file-loader'
+            },
+            {
+                test: /\.css/,
+                loader: ['style-loader', 'css-loader', 'postcss-loader']
             }
         ]
     },

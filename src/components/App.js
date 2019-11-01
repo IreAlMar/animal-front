@@ -14,31 +14,34 @@ class App extends React.Component {
             currentAnimal: null,
         };
 
-        //this.onAnimalClick = this.onAnimalClick.bind(this);
+        // this.onAnimalClick = this.onAnimalClick.bind(this);
     }
+
     componentDidMount() {
         fetch(`${API_URL}/comp-group/getspecies/chameleons?token=${token}`)
-            .then(res => res.json())
-            //.then(animals => {
+            .then((res) => res.json())
+            // .then(animals => {
             // this.setState({ animals });
             // Edit the state
-            .then(json => {
-                this.setState({ animals: json.result.filter(animal => animal.category == "DD") });
+            .then((json) => {
+                this.setState({ animals: json.result.filter((animal) => animal.category === 'DD') });
             });
     }
 
     onAnimalClick = (name) => {
         fetch(`${API_URL}/species/narrative/${name}?token=${token}`)
-            .then(res => res.json())
-            .then(animal => {
+            .then((res) => res.json())
+            .then((animal) => {
                 this.setState({ currentAnimal: animal });
             });
-    } 
-    // The scope of a function depends on where the function is being called
-    // onAnimalClick is being called not in the App class but in the AnimalList component
-    // -> explicitly bind the function into the scope of the class, two options:    
-    // A) in the constructor: this.onAnimalClick = this.onAnimalClick.bind(this);
-    // B) Nicer way: define the onAnimalClick as an arrow function -> install babel preset babel-preset-stage-0
+    }
+    /* The scope of a function depends on where the function is being called
+     onAnimalClick is being called not in the App class but in the AnimalList component
+     -> explicitly bind the function into the scope of the class, two options:
+     A) in the constructor: this.onAnimalClick = this.onAnimalClick.bind(this);
+     B) Nicer way: define the onAnimalClick as an arrow function
+     -> install babel preset babel-preset-stage-0
+    */
 
     render() {
         const { animals, currentAnimal } = this.state;
@@ -47,13 +50,16 @@ class App extends React.Component {
             // State is inizialized in the constructor
             <div>
                 <Header />
-                <main style={{ display: 'flex' }}>
+                {/* px4 -> apply padding x-> to the right and left (not to the top and bottom) */}
+                <main className="px4 flex">
                     <AnimalList
                         animals={animals}
                         style={{ flex: 3 }}
                         // get onAnimalClick callback from the this as this is a class method
-                        onClick={this.onAnimalClick} />
+                        onClick={this.onAnimalClick}
+                    />
                     <AnimalDetail
+                        className="ml4"
                         style={{ flex: 5 }}
                         animal={currentAnimal}
                     />

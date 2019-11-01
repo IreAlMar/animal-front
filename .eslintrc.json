@@ -1,0 +1,20 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "globals": {
+        "API_URL": true,
+        "token": true
+    },
+    "rules": {
+        "react/jsx-filename-extension": 0,
+        "react/forbid-prop-types": 0,
+        "react/require-default-props": 0,
+        "indent": 0
+    }
+}
