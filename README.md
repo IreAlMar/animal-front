@@ -66,3 +66,14 @@ ESLint: Open-source JavaScript Linting Utility
         1. Add rule if wanted to the lin config: `react/forbid-prop-types: 0`
     * `error  Expected linebreaks to be 'LF' but found 'CRLF'  linebreak-style`
     When using VSCode on Windows, click the option at the bottom-right of the window and set it to LF from CRLF. Should not turn off the configuration just for sake of removing errors. (<https://stackoverflow.com/questions/37826449/expected-linebreaks-to-be-lf-but-found-crlf-linebreak-style>)
+
+## Prettier
+
+Tool for building and enforcing a style guide.
+
+1. `yarn add prettier --dev`
+1. `.eslintrc.json` 'airbnb' rules predominant to 'prettier' rules:
+    `"extends": [
+        "prettier",
+        "airbnb"
+    ],`
