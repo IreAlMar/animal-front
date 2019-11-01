@@ -72,8 +72,10 @@ ESLint: Open-source JavaScript Linting Utility
 Tool for building and enforcing a style guide.
 
 1. `yarn add prettier --dev`
-1. `.eslintrc.json` 'airbnb' rules predominant to 'prettier' rules:
+1. `./node_modules/.bin/prettier ./src/components/*.js --write`
+1. `.eslintrc.json` 'airbnb' rules predominant to 'prettier' rules (order matters):
     `"extends": [
         "prettier",
         "airbnb"
     ],`
+1. `yarn add eslint-config-prettier --dev`

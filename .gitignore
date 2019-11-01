@@ -1,3 +1,6 @@
 node_modules
 
 dist
+/src/static/images/640px-Bored_Raccoon.jpg
+/src/static/images/chameleon-emoji.png
+/src/static/images/racoon-logo.png
