@@ -106,3 +106,6 @@ Not fully working right now.
     -> this is going to redirect any request to 'index.js' in case of not found page.
     -> `Child html-webpack-plugin for "index.html"`
 1. Restart server
+The order of the routes matters, it will pick the first match.
+1. Foldback route to render in case none of the routes match:
+`<Route component={NotFound} />`
