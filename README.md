@@ -84,7 +84,7 @@ Tool for building and enforcing a style guide.
 
 Precommiting step to apply lint ant prettier rules before commiting.
 Not fully working right now.
-` "lint": "./node_modules/.bin/eslint ./src",
+`"lint": "./node_modules/.bin/eslint ./src",
         // "precommit": "lint-staged"
     },
     "lint-staged": {
@@ -94,3 +94,15 @@ Not fully working right now.
             "git add"
         ]
     },`
+
+## Routing
+
+1. `yarn add react-router-dom`
+1. Create `<BrowserRouter>` element
+1. Add devServer to 'webpack.config.js':
+   `devServer: {
+        historyApiFallback: true,
+    },`
+    -> this is going to redirect any request to 'index.js' in case of not found page.
+    -> `Child html-webpack-plugin for "index.html"`
+1. Restart server

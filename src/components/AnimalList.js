@@ -21,7 +21,7 @@ const AnimalList = props => (
 );
 
 AnimalList.propTypes = {
-  animals: PropTypes.object,
+  animals: PropTypes.array,
   style: PropTypes.object,
 };
 
