@@ -7,11 +7,12 @@ import NotFound from './NotFound';
 
 const App = () => (
     <div>
-        <Header />
         <BrowserRouter>
             {/* 'BrowserRouter' only accepts one child -> wrap routes 
         order matters here*/}
             <main>
+                {/* Important! Use of Link or NavLink from other components must be inside BrowserRouter */}
+                <Header />
                 <Switch>
                     <Redirect from="/home" to="/" />
                     <Route exact path="/" component={Home} />
