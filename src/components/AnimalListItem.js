@@ -18,7 +18,8 @@ const AnimalListItem = ({
         onClick={e => {
           // To rpevent the animal to be shown when box clicked
           e.stopPropagation();
-          onFavorited(animal.taxonid)
+          onFavorited(animal.taxonid);
+          console.log(favorited);
         }}
         role="img"
         aria-label="favorite"

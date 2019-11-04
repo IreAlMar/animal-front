@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AnimalList from './AnimalList';
 import AnimalDetail from './AnimalDetail';
 
@@ -9,25 +10,10 @@ class Home extends React.Component {
     super(props);
 
     this.state = {
-      animals: [],
       currentAnimal: null,
-      favorites: [],
     };
 
     // this.onAnimalClick = this.onAnimalClick.bind(this);
-  }
-
-  componentDidMount() {
-    fetch(`${API_URL}/comp-group/getspecies/chameleons?token=${token}`)
-      .then(res => res.json())
-      // .then(animals => {
-      // this.setState({ animals });
-      // Edit the state
-      .then(json => {
-        this.setState({
-          animals: json.result.filter(animal => animal.category === 'DD'),
-        });
-      });
   }
 
   onAnimalClick = name => {
@@ -45,35 +31,28 @@ class Home extends React.Component {
      -> install babel preset babel-preset-stage-0
     */
 
-    // Class function
-  toggleFavorite = id => {
-    this.setState(({ favorites, ...state }) => {
-      const idx = favorites.indexOf(id);
+  // Class function
 
-      if (idx !== -1) {
-        return { ...state, favorites: favorites.filter(f => f.id !== id) };
-      }
-
-      return { ...state, favorites: [...favorites, id] };
-    });
-  }
 
   render() {
-    const { animals, currentAnimal, favorites } = this.state;
+    const { animals, favorites } = this.props.state;
+    const { currentAnimal } = this.state;
 
     return (
       // State is inizialized in the constructor
       <div>
         {/* px4 -> apply padding x-> to the right and left (not to the top and bottom) */}
         <main className="px4 flex">
-          <AnimalList
-            animals={animals}
-            favorites={favorites}
-            style={{ flex: 3 }}
-            // get onAnimalClick callback from the this as this is a class method
-            onClick={this.onAnimalClick}
-            onFavorited={this.toggleFavorite}
-          />
+          <div style={{ flex: 3 }}>
+            <h2 className="h2">Animals</h2>
+            <AnimalList
+              animals={animals}
+              favorites={favorites}              
+              // get onAnimalClick callback from the this as this is a class method
+              onClick={this.onAnimalClick}
+              onFavorited={this.props.toggleFavorite}
+            />
+          </div>
           <AnimalDetail
             className="ml4"
             style={{ flex: 5 }}
@@ -83,6 +62,10 @@ class Home extends React.Component {
       </div>
     );
   }
+}
+
+Home.propTypes = {
+  state: PropTypes.object
 }
 
 // Props are just read only! -> Good practice not to edit them inside the component.
