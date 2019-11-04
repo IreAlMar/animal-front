@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './Header';
 import AnimalList from './AnimalList';
 import AnimalDetail from './AnimalDetail';
 
@@ -12,6 +11,7 @@ class Home extends React.Component {
     this.state = {
       animals: [],
       currentAnimal: null,
+      favorites: [],
     };
 
     // this.onAnimalClick = this.onAnimalClick.bind(this);
@@ -45,8 +45,21 @@ class Home extends React.Component {
      -> install babel preset babel-preset-stage-0
     */
 
+    // Class function
+  toggleFavorite = id => {
+    this.setState(({ favorites, ...state }) => {
+      const idx = favorites.indexOf(id);
+
+      if (idx !== -1) {
+        return { ...state, favorites: favorites.filter(f => f.id !== id) };
+      }
+
+      return { ...state, favorites: [...favorites, id] };
+    });
+  }
+
   render() {
-    const { animals, currentAnimal } = this.state;
+    const { animals, currentAnimal, favorites } = this.state;
 
     return (
       // State is inizialized in the constructor
@@ -55,9 +68,11 @@ class Home extends React.Component {
         <main className="px4 flex">
           <AnimalList
             animals={animals}
+            favorites={favorites}
             style={{ flex: 3 }}
             // get onAnimalClick callback from the this as this is a class method
             onClick={this.onAnimalClick}
+            onFavorited={this.toggleFavorite}
           />
           <AnimalDetail
             className="ml4"
