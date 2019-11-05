@@ -39,11 +39,12 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
-            inject: 'body'
+            inject: 'body',
         }),
         new webpack.DefinePlugin({
             API_URL: JSON.stringify(process.env.API_URL),
             token: JSON.stringify(process.env.token)
-        })
+        }),
+
     ]
 };

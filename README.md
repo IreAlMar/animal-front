@@ -120,3 +120,27 @@ In 'webpack.config.js' add the key `publicPath` with value the root of the app :
         publicPath: '/',
     },`
 Restart server.
+
+## Component Testing
+
+### Jest
+
+1. `yarn add jest --dev`
+1. Create 'specs' folder
+1. Install eslint plugin `yarn add eslint-plugin-jest --dev`
+1. In '.eslintrc.json' add
+`"plugins": [
+    "jest"
+],`
+1. In '.eslintrc.json' add
+`"env": {
+        ...
+        ...
+        "jest/globals": true
+    },`
+1. In 'package.json' add a new script:
+`"test": "./node_modules/.bin/jest",`
+1. Add to '.babelrc'
+`"test": [
+        "jest"
+    ]`
