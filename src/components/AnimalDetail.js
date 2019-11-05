@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 const AnimalDetail = props => {
@@ -85,6 +86,12 @@ const AnimalDetail = props => {
         <h3>Conservation measures</h3>
         <span>{props.animal.result[0].conservationmeasures}</span>
       </div>
+      {/* Redirect the user to a given path */}
+      <Link
+        to={`/animal/${props.animal.name}`}
+      >
+        See more
+      </Link>
     </div>
   );
 };

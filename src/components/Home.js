@@ -47,7 +47,7 @@ class Home extends React.Component {
             <h2 className="h2">Animals</h2>
             <AnimalList
               animals={animals}
-              favorites={favorites}              
+              favorites={favorites}
               // get onAnimalClick callback from the this as this is a class method
               onClick={this.onAnimalClick}
               onFavorited={this.props.toggleFavorite}
@@ -65,8 +65,9 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-  state: PropTypes.object
-}
+  state: PropTypes.object,
+  toggleFavorite: PropTypes.func,
+};
 
 // Props are just read only! -> Good practice not to edit them inside the component.
 

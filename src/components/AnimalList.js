@@ -8,17 +8,17 @@ const AnimalList = ({
   animals,
   ...props
 }) => (
-    <ul className="list-reset" style={style} >
-      {animals.map(animal => (
-        <AnimalListItem
-          key={animal.taxonid}
-          animal={animal}
-          favorited={favorites.includes(animal.taxonid)}
-          {...props}
-        />
-      ))}
-    </ul>
-  );
+  <ul className="list-reset" style={style}>
+    {animals.map(animal => (
+      <AnimalListItem
+        key={animal.taxonid}
+        animal={animal}
+        favorited={favorites.includes(animal.taxonid)}
+        {...props}
+      />
+    ))}
+  </ul>
+);
 
 AnimalList.propTypes = {
   animals: PropTypes.array,

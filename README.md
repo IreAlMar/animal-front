@@ -109,3 +109,14 @@ Not fully working right now.
 The order of the routes matters, it will pick the first match.
 1. Foldback route to render in case none of the routes match:
 `<Route component={NotFound} />`
+
+### Parameters and URLs
+
+In 'webpack.config.js' add the key `publicPath` with value the root of the app : '/'
+
+`output: {
+        ...
+        ...
+        publicPath: '/',
+    },`
+Restart server.
