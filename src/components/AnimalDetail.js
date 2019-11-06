@@ -76,16 +76,19 @@ const AnimalDetail = props => {
         src={imageAddress.get(props.animal.name)}
         alt="Chamaleon"
       />
-      <div>
-        <h3>Description</h3>
-        <span>{props.animal.result[0].taxonomicnotes}</span>
-        <h3>Habitat</h3>
-        <span>{props.animal.result[0].habitat}</span>
-        <h3>Threats</h3>
-        <span>{props.animal.result[0].threats}</span>
-        <h3>Conservation measures</h3>
-        <span>{props.animal.result[0].conservationmeasures}</span>
-      </div>
+
+      {props.animal.result[0] && (
+        <div>
+          <h3>Description</h3>
+          <span>{props.animal.result[0].taxonomicnotes}</span>
+          <h3>Habitat</h3>
+          <span>{props.animal.result[0].habitat}</span>
+          <h3>Threats</h3>
+          <span>{props.animal.result[0].threats}</span>
+          <h3>Conservation measures</h3>
+          <span>{props.animal.result[0].conservationmeasures}</span>
+        </div>
+      )}
       {/* Redirect the user to a given path */}
       <Link
         to={`/animal/${props.animal.name}`}

@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnimalListItem /> Should correctly reder animal 1`] = `
+<li
+  className="py2 border-bottom border-bottom-dashed pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    ☐
+  </span>
+  <span>
+    Chamaleon test name
+  </span>
+  <span>
+    Test category
+  </span>
+</li>
+`;
+
+exports[`<AnimalListItem /> Should not break if no animal is passed 1`] = `
+<li
+  className="py2 border-bottom border-bottom-dashed pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    ☐
+  </span>
+  <span />
+  <span />
+</li>
+`;
+
+exports[`<AnimalListItem /> Should render favorite state 1`] = `
+<li
+  className="py2 border-bottom border-bottom-dashed pointer"
+  onClick={[Function]}
+>
+  <span
+    aria-label="favorite"
+    className="mr1"
+    onClick={[Function]}
+    role="img"
+  >
+    ✅
+  </span>
+  <span>
+    Chamaleon test name
+  </span>
+  <span>
+    Test category
+  </span>
+</li>
+`;

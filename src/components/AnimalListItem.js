@@ -37,4 +37,8 @@ AnimalListItem.propTypes = {
   onFavorited: PropTypes.func,
 };
 
+AnimalListItem.defaultProps = {
+  animal: {},
+};
+
 export default AnimalListItem;

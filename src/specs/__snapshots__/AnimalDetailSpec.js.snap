@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Should correctly assign a className 1`] = `
+<div
+  className="p2 bg-white classname-test"
+>
+  <h2
+    className="h2"
+  >
+    Chamaleon test name
+  </h2>
+  <img
+    alt="Chamaleon"
+    className="fit"
+  />
+  <div>
+    <h3>
+      Description
+    </h3>
+    <span>
+      Test taxonomic notes
+    </span>
+    <h3>
+      Habitat
+    </h3>
+    <span>
+      Test habitat
+    </span>
+    <h3>
+      Threats
+    </h3>
+    <span>
+      Test threats
+    </span>
+    <h3>
+      Conservation measures
+    </h3>
+    <span>
+      Test conservation measures
+    </span>
+  </div>
+  <a
+    href="/animal/Chamaleon test name"
+    onClick={[Function]}
+  >
+    See more
+  </a>
+</div>
+`;
+
+exports[`<Header /> Should correctly render an animal 1`] = `
+<div
+  className="p2 bg-white"
+>
+  <h2
+    className="h2"
+  >
+    Chamaleon test name
+  </h2>
+  <img
+    alt="Chamaleon"
+    className="fit"
+  />
+  <div>
+    <h3>
+      Description
+    </h3>
+    <span>
+      Test taxonomic notes
+    </span>
+    <h3>
+      Habitat
+    </h3>
+    <span>
+      Test habitat
+    </span>
+    <h3>
+      Threats
+    </h3>
+    <span>
+      Test threats
+    </span>
+    <h3>
+      Conservation measures
+    </h3>
+    <span>
+      Test conservation measures
+    </span>
+  </div>
+  <a
+    href="/animal/Chamaleon test name"
+    onClick={[Function]}
+  >
+    See more
+  </a>
+</div>
+`;
+
+exports[`<Header /> Should render an animal without result 1`] = `
+<div
+  className="p2 bg-white"
+>
+  <h2
+    className="h2"
+  >
+    Chamaleon test name
+  </h2>
+  <img
+    alt="Chamaleon"
+    className="fit"
+  />
+  <a
+    href="/animal/Chamaleon test name"
+    onClick={[Function]}
+  >
+    See more
+  </a>
+</div>
+`;
+
+exports[`<Header /> Should render an animal without taxonomicnotes 1`] = `
+<div
+  className="p2 bg-white"
+>
+  <h2
+    className="h2"
+  >
+    Chamaleon test name
+  </h2>
+  <img
+    alt="Chamaleon"
+    className="fit"
+  />
+  <div>
+    <h3>
+      Description
+    </h3>
+    <span />
+    <h3>
+      Habitat
+    </h3>
+    <span>
+      Test habitat
+    </span>
+    <h3>
+      Threats
+    </h3>
+    <span>
+      Test threats
+    </span>
+    <h3>
+      Conservation measures
+    </h3>
+    <span>
+      Test conservation measures
+    </span>
+  </div>
+  <a
+    href="/animal/Chamaleon test name"
+    onClick={[Function]}
+  >
+    See more
+  </a>
+</div>
+`;
+
+exports[`<Header /> Should render zero state 1`] = `
+<p
+  className="h3 p2 bg-white italic center"
+>
+  Please select an animal to see the detail.
+</p>
+`;

@@ -44,6 +44,7 @@ Linter: Tool that detects and flags errors in programming languages without exec
 Coding style guide among a team.
 
 ESLint: Open-source JavaScript Linting Utility
+> In order to have the visual studio linter working, the open project from the project directory, not parent directory.
 
 1. `yarn add eslint --dev`
 1. Add rhe lint script in the `package.json` -> `"lint": "./node_modules/.bin/eslint ./src"`
@@ -144,3 +145,20 @@ Restart server.
 `"test": [
         "jest"
     ]`
+
+Creating tests
+
+1. `yarn add react-test-renderer --dev`
+
+test working with 'babel.config.js' but not application.
+
+`module.exports = {
+  presets: [
+    '@babel/preset-env',
+    '@babel/preset-react',
+  ],
+};`
+
+1. TO update snapshots: `yarn test -- -u`
+
+Mock Static Assets in tests

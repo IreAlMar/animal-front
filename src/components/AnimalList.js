@@ -26,4 +26,9 @@ AnimalList.propTypes = {
   favorites: PropTypes.array,
 };
 
+AnimalList.defaultProps = {
+  animals: [],
+  favorites: [],
+};
+
 export default AnimalList;

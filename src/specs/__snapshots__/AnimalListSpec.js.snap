@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnimalList /> Should not break when no animals passed 1`] = `
+<ul
+  className="list-reset"
+/>
+`;
+
+exports[`<AnimalList /> Should render correctly 1`] = `
+<ul
+  className="list-reset"
+>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      ☐
+    </span>
+    <span>
+      Calumma fallax
+    </span>
+    <span />
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      ☐
+    </span>
+    <span>
+      Calumma vatosoa
+    </span>
+    <span />
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      ☐
+    </span>
+    <span>
+      Chamaeleo necasi
+    </span>
+    <span />
+  </li>
+</ul>
+`;
+
+exports[`<AnimalList /> Should render favorite state correctly 1`] = `
+<ul
+  className="list-reset"
+>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      ✅
+    </span>
+    <span>
+      Calumma fallax
+    </span>
+    <span />
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      ☐
+    </span>
+    <span>
+      Calumma vatosoa
+    </span>
+    <span />
+  </li>
+  <li
+    className="py2 border-bottom border-bottom-dashed pointer"
+    onClick={[Function]}
+  >
+    <span
+      aria-label="favorite"
+      className="mr1"
+      onClick={[Function]}
+      role="img"
+    >
+      ☐
+    </span>
+    <span>
+      Chamaeleo necasi
+    </span>
+    <span />
+  </li>
+</ul>
+`;
