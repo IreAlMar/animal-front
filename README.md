@@ -159,6 +159,8 @@ test working with 'babel.config.js' but not application.
   ],
 };`
 
-1. TO update snapshots: `yarn test -- -u`
+1. To update snapshots: `yarn test -- -u`
 
-Mock Static Assets in tests
+Use Enzymeto test more complex scenarios.
+
+1. `yarn add enzyme enzyme-adapter-react-16 --dev`
